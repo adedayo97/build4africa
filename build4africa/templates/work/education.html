@@ -1,0 +1,305 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Education & eLearning - Build4Africa{% endblock %}
+
+{% block content %}
+<head>
+    <!-- Add this line to load Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<!-- Hero Section -->
+<section class="hero-section py-5" style="background-color: #2C3E50;">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-4 text-white">Education & eLearning Platforms</h1>
+                <p class="lead mb-4 text-white">World-Class Learning, Accessible to Every African</p>
+                <p class="text-white-90 mb-4" style="font-size: 1.1rem; line-height: 1.6;">Education is the foundation of transformation—and in the digital age, it must be accessible, adaptive, and relevant. Our Education & eLearning Platforms are designed to close the education gap across Africa by delivering high-quality, future-ready learning opportunities to anyone, anywhere.</p>
+                <p class="text-white-90 mb-4" style="font-size: 1.1rem; line-height: 1.6;">Whether you're a student in a rural village or an aspiring tech professional in a bustling city, our platforms provide the tools and knowledge to learn, grow, and compete globally.</p>
+                <a href="#get-involved" class="btn btn-light btn-lg mt-3">Join the Revolution</a>
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/elearning.jpg' %}" class="img-fluid rounded shadow-lg" alt="Students using eLearning platform" style="max-height: 400px; width: 100%; object-fit: cover; object-position: center;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What We Offer Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="fw-bold">What We Offer</h2>
+                <p class="lead">Reimagining education through technology with innovative, user-friendly platforms</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Adaptive Learning Card -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-primary text-primary mb-3">
+                            <i class="fas fa-robot fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">AI-Powered Adaptive Learning</h4>
+                        <p class="card-text">Intelligent learning systems that personalize education based on each learner's pace, strengths, and goals.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications Card -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-success text-success mb-3">
+                            <i class="fas fa-certificate fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Career-Ready Certifications</h4>
+                        <p class="card-text">Industry-recognized programs in high-demand fields to boost employability and career mobility.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Open Courses Card -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-info text-info mb-3">
+                            <i class="fas fa-graduation-cap fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Open-Access Courses</h4>
+                        <p class="card-text">Free online courses in STEM, finance, governance, and entrepreneurship for learners at all levels.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Digital Literacy Card -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-warning text-warning mb-3">
+                            <i class="fas fa-laptop-code fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Digital Literacy Programs</h4>
+                        <p class="card-text">On-ground training to build essential digital skills in underserved communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why It Matters Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="{% static 'images/digital_classrom.jpg' %}" alt="Digital classroom in Africa" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-4">Why It Matters</h2>
+                <p>Education should never be a privilege—it should be a right. Across Africa, millions of young people are eager to learn but lack access to quality resources.</p>
+                
+                <div class="mt-4">
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <div class="icon-box bg-primary text-white rounded-circle">
+                                <i class="fas fa-universal-access"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Democratize education</h5>
+                            <p>Make quality learning accessible to all, regardless of location or income.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <div class="icon-box bg-success text-white rounded-circle">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Prepare for the digital economy</h5>
+                            <p>Equip learners with skills that match 21st century job market needs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <div class="icon-box bg-info text-white rounded-circle">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Foster innovation</h5>
+                            <p>Nurture creativity and critical thinking through interactive learning.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <div class="icon-box bg-warning text-white rounded-circle">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Empower communities</h5>
+                            <p>Transform entire communities through the power of shared knowledge.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="fw-bold">Transforming Learning Across the Continent</h2>
+                <p class="lead">Delivering education where it's needed most—helping learners gain skills that unlock opportunities</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4 text-center">
+                <div class="impact-stat display-4 fw-bold text-primary">500K+</div>
+                <h4 class="mt-2">Learners Reached</h4>
+                <p>Through our eLearning platforms</p>
+            </div>
+            
+            <div class="col-md-4 text-center">
+                <div class="impact-stat display-4 fw-bold text-success">85%</div>
+                <h4 class="mt-2">Completion Rate</h4>
+                <p>For our career certification programs</p>
+            </div>
+            
+            <div class="col-md-4 text-center">
+                <div class="impact-stat display-4 fw-bold text-info">12</div>
+                <h4 class="mt-2">Countries Served</h4>
+                <p>With localized learning content</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Get Involved Section -->
+<section id="get-involved" class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h2 class="fw-bold">Join the Education Revolution</h2>
+                <p class="lead text-white">We're calling on educators, governments, tech partners, and changemakers to collaborate with us</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 bg-secondary text-white">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box bg-white text-primary rounded-circle mx-auto mb-3">
+                            <i class="fas fa-chalkboard-teacher fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">For Educators</h4>
+                        <p class="card-text text-white">Contribute to our open learning platforms and curriculum development.</p>
+                        <a href="{% url 'get_involved:volunteer' %}" class="btn btn-light mt-3">Teach With Us</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 bg-secondary text-white">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box bg-white text-success rounded-circle mx-auto mb-3">
+                            <i class="fas fa-laptop-code fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">For Tech Partners</h4>
+                        <p class="card-text text-white">Help build and scale our eLearning infrastructure.</p>
+                        <a href="{% url 'get_involved:partner' %}" class="btn btn-light mt-3">Tech Partnerships</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 bg-secondary text-white">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box bg-white text-warning rounded-circle mx-auto mb-3">
+                            <i class="fas fa-hands-helping fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">For Governments</h4>
+                        <p class="card-text text-white">Implement our solutions in your national education system.</p>
+                        <a href="{% url 'get_involved:donate' %}" class="btn btn-light mt-3">Policy Partnerships</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <p class="lead mb-4 text-white">👉 Explore. Learn. Empower. The future of education is here.</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg px-4 me-2">Contact Us</a>
+                <a href="{% url 'innovation:index' %}" class="btn btn-outline-light btn-lg px-4">See Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .text-white-90 {
+        color: rgba(255, 255, 255, 0.95);
+    }
+    
+    .icon-box {
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .impact-stat {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+    
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    
+    section {
+        padding: 5rem 0;
+    }
+    
+    .bg-light-primary { background-color: rgba(13, 110, 253, 0.1); }
+    .bg-light-success { background-color: rgba(25, 135, 84, 0.1); }
+    .bg-light-info { background-color: rgba(13, 202, 240, 0.1); }
+    .bg-light-warning { background-color: rgba(255, 193, 7, 0.1); }
+    
+    @media (max-width: 992px) {
+        .hero-section .col-lg-4 {
+            margin-top: 2rem;
+        }
+        .hero-section img {
+            max-height: 300px;
+        }
+    }
+</style>
+{% endblock %}

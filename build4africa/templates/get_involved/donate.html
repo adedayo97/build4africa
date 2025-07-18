@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Donate - Build4Africa{% endblock %}
+
+{% block content %}
+<head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<!-- Hero Section -->
+<section class="hero-section" style="background-color: #2C3E50; padding: 100px 0;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="text-white mb-4">Support Our Mission</h1>
+                <p class="lead text-white">We're building something powerful—and your support will make a difference.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Coming Soon Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="card border-0 shadow-sm p-5 mb-5" style="border-radius: 15px;">
+                    <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle p-4 mb-4 mx-auto" style="width: 100px; height: 100px;">
+                        <i class="fas fa-hourglass-half fa-3x" style="color: #2C3E50;"></i>
+                    </div>
+                    <h2 class="mb-4">The Build4Africa Donate Page is Coming Soon</h2>
+                    <p class="lead mb-4">Soon, you'll be able to partner with us to empower youth, expand digital access, and drive innovation across Africa.</p>
+                    
+                    <div class="impact-points text-start mb-5" style="max-width: 600px; margin: 0 auto;">
+                        <div class="d-flex mb-3">
+                            <div class="me-3" style="color: #2C3E50;">
+                                <i class="fas fa-lightbulb fa-lg"></i>
+                            </div>
+                            <div>
+                                <p class="mb-0">Every contribution will go toward training, tools, and tech infrastructure in underserved communities.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-box bg-light p-4 rounded" style="max-width: 600px; margin: 0 auto;">
+                        <h4 class="mb-3">Stay Tuned!</h4>
+                        <p class="mb-4">In the meantime, reach out to us to learn how you can support.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="{% url 'contact' %}" class="btn px-4" style="background-color: #2C3E50; color: white;">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .hero-section {
+        background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 90%);
+    }
+    
+    .impact-points .d-flex {
+        align-items: flex-start;
+    }
+    
+    .icon-wrapper {
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover .icon-wrapper {
+        transform: scale(1.1) rotate(10deg);
+    }
+</style>
+{% endblock %}

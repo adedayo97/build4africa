@@ -1,0 +1,368 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="innovation-hero section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="mb-4">Build4Africa Innovation Labs</h1>
+                <p class="lead mb-4">Catalyzing Africa's digital transformation through collaborative technology solutions</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#collaborate" class="btn btn-primary px-4 py-2">Partner With Us</a>
+                    <a href="#projects" class="btn btn-outline-primary px-4 py-2">Explore Projects</a>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <img src="{% static 'images/innovation_lab2.jpg' %}" class="img-fluid rounded shadow" alt="Innovation Lab Team">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Flagship Projects Section -->
+<section id="projects" class="section-padding section-bg">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="mb-3">Our Flagship Projects</h2>
+                <p class="lead text-muted">Technology solutions transforming communities across Africa</p>
+            </div>
+        </div>
+
+        <!-- Project 1 -->
+        <div class="row align-items-center mb-5 gy-4">
+            <div class="col-lg-6">
+                <div class="pe-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="project-icon me-3">
+                            <i class="bi-building-gear"></i>
+                        </div>
+                        <h3 class="mb-0">Build4Gov – Smart Governance Suite</h3>
+                    </div>
+                    <p class="mb-3">An AI-powered digital toolset that enables governments to:</p>
+                    <ul class="project-features mb-4">
+                        <li>Receive and respond to citizen appeals</li>
+                        <li>Showcase project performance</li>
+                        <li>Improve public trust and transparency</li>
+                    </ul>
+                     
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'images/Smart Governance Suite.jpg' %}" class="img-fluid rounded shadow" alt="Build4Gov Platform">
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="row align-items-center mb-5 gy-4 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <div class="ps-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="project-icon me-3">
+                            <i class="bi-phone"></i>
+                        </div>
+                        <h3 class="mb-0">AfriFinTech – Inclusive Digital Banking</h3>
+                    </div>
+                    <p class="mb-3">A robust mobile-first platform for:</p>
+                    <ul class="project-features mb-4">
+                        <li>Local currency transactions</li>
+                        <li>Community savings</li>
+                        <li>Micro-loans and agricultural financing</li>
+                        <li>SME trading</li>
+                    </ul>
+                     
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'images/afritech.jpg' %}" class="img-fluid rounded shadow" alt="AfriFinTech App">
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="row align-items-center mb-5 gy-4">
+            <div class="col-lg-6">
+                <div class="pe-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="project-icon me-3">
+                            <i class="bi-laptop"></i>
+                        </div>
+                        <h3 class="mb-0">EduPower Africa</h3>
+                    </div>
+                    <p class="mb-3">A digital learning ecosystem offering:</p>
+                    <ul class="project-features mb-4">
+                        <li>Free foundational tech courses</li>
+                        <li>Certification bootcamps</li>
+                        <li>Youth coding competitions</li>
+                        <li>Local language content</li>
+                    </ul>
+                     
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'images/edupower.jpg' %}" class="img-fluid rounded shadow" alt="EduPower Platform">
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <div class="ps-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="project-icon me-3">
+                            <i class="bi-shield-check"></i>
+                        </div>
+                        <h3 class="mb-0">Tech4Justice</h3>
+                    </div>
+                    <p class="mb-3">Legal empowerment tools for citizens, including:</p>
+                    <ul class="project-features mb-4">
+                        <li>Legal aid apps</li>
+                        <li>AI legal advisors</li>
+                        <li>Human rights education modules</li>
+                    </ul>
+                     
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'images/tech4justice2.jpg' %}" class="img-fluid rounded shadow" alt="Tech4Justice Interface">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Collaboration Section -->
+<section id="collaborate" class="section-padding">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="mb-3">Who Can Join or Collaborate?</h2>
+                <p class="lead text-muted">Be part of Africa's digital transformation</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="collaborator-card h-100 p-4">
+                    <div class="collaborator-icon mb-3">
+                        <i class="bi-building"></i>
+                    </div>
+                    <h5 class="mb-3">Governments & Agencies</h5>
+                    <p class="mb-0">Seeking tech-driven development solutions for your constituents</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="collaborator-card h-100 p-4">
+                    <div class="collaborator-icon mb-3">
+                        <i class="bi-mortarboard"></i>
+                    </div>
+                    <h5 class="mb-3">Youth & Students</h5>
+                    <p class="mb-0">Seeking digital empowerment and skills development</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="collaborator-card h-100 p-4">
+                    <div class="collaborator-icon mb-3">
+                        <i class="bi-code-slash"></i>
+                    </div>
+                    <h5 class="mb-3">Tech Professionals</h5>
+                    <p class="mb-0">Looking to contribute your expertise to meaningful projects</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="collaborator-card h-100 p-4">
+                    <div class="collaborator-icon mb-3">
+                        <i class="bi-people-fill"></i>
+                    </div>
+                    <h5 class="mb-3">NGOs & Foundations</h5>
+                    <p class="mb-0">With shared development goals for Africa's future</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="collaborator-card h-100 p-4">
+                    <div class="collaborator-icon mb-3">
+                        <i class="bi-graph-up-arrow"></i>
+                    </div>
+                    <h5 class="mb-3">Investors & Philanthropists</h5>
+                    <p class="mb-0">Ready to support Africa's digital transformation</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg px-5 py-3">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Presence Section -->
+<section class="section-padding section-bg">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h2 class="mb-4">Our Pan-African Presence</h2>
+                <p class="mb-4">Build4Africa operates across multiple African nations, with regional hubs and satellite innovation labs. Our work impacts:</p>
+                <ul class="presence-list">
+                    <li class="mb-3">
+                        <i class="bi-house-door-fill"></i>
+                        <span>Rural communities through localized solutions</span>
+                    </li>
+                    <li class="mb-3">
+                        <i class="bi-buildings-fill"></i>
+                        <span>Urban centers through scalable tech infrastructure</span>
+                    </li>
+                    <li>
+                        <i class="bi-globe-americas"></i>
+                        <span>Diaspora Africans through reintegration and collaborative investment</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-3 bg-white rounded shadow">
+                    <img src="{% static 'images/pan_africa.jpg' %}" class="img-fluid" alt="African Presence Map">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    :root {
+        --primary-color: #2C3E50;
+        --primary-dark: #1a252f;
+        --primary-light: rgba(44, 62, 80, 0.1);
+    }
+
+    /* Buttons */
+    .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+    
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: var(--primary-dark);
+        border-color: var(--primary-dark);
+    }
+    
+    .btn-outline-primary {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+    
+    .btn-outline-primary:hover,
+    .btn-outline-primary:focus {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    /* Hero Section */
+    .innovation-hero {
+        background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), 
+                    url('{% static "images/innovation_bg2.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    /* Project Styles */
+    .project-icon {
+        width: 50px;
+        height: 50px;
+        background: var(--primary-light);
+        color: var(--primary-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .project-features {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .project-features li {
+        margin-bottom: 0.75rem;
+        padding-left: 1.75rem;
+        position: relative;
+    }
+    
+    .project-features li:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.5em;
+        width: 1rem;
+        height: 2px;
+        background: var(--primary-color);
+    }
+
+    /* Collaborator Cards */
+    .collaborator-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        border-top: 4px solid var(--primary-color);
+    }
+
+    .collaborator-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .collaborator-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--primary-light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        font-size: 1.75rem;
+        color: var(--primary-color);
+    }
+
+    /* Presence List */
+    .presence-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .presence-list li {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .presence-list i {
+        margin-right: 15px;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-top: 3px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .innovation-hero {
+            background-attachment: scroll;
+        }
+        
+        .project-features li {
+            padding-left: 1.5rem;
+        }
+    }
+</style>
+{% endblock %}

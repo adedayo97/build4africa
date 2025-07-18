@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Volunteer - Build4Africa{% endblock %}
+
+{% block meta_description %}Join Build4Africa as a volunteer and contribute to empowering African communities through technology and innovation. Make a difference today.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" style="min-height: 60vh;">
+    <div class="container" style="max-width: 800px;">
+        <div class="row justify-content-center align-items-center" style="min-height: 60vh;">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6 text-center">
+                <h1 class="text-white">Volunteer With Us</h1>
+                <p class="text-white">Join our team of changemakers and help build a better Africa</p>
+                <a href="#volunteer-form" class="custom-btn btn smoothscroll mt-3">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Volunteer Opportunities Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12 text-center mb-5">
+                <h2>Volunteer Opportunities</h2>
+                <p>We're looking for passionate individuals to join us in various capacities</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="custom-block-wrap">
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">Tech Mentors</h5>
+                            <p>Guide youth in coding, AI, and digital skills programs</p>
+                            <ul class="custom-list mt-3">
+                                <li>• 5-10 hours/week commitment</li>
+                                <li>• Remote or in-person</li>
+                                <li>• Technical background required</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="custom-block-wrap">
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">Community Coordinators</h5>
+                            <p>Help organize local events and workshops</p>
+                            <ul class="custom-list mt-3">
+                                <li>• Strong organizational skills</li>
+                                <li>• Local community knowledge</li>
+                                <li>• 3-6 month commitment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="custom-block-wrap">
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">Content Creators</h5>
+                            <p>Develop educational materials and documentation</p>
+                            <ul class="custom-list mt-3">
+                                <li>• Writing/design skills</li>
+                                <li>• Flexible hours</li>
+                                <li>• Remote position</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Volunteer Form Section -->
+<section class="volunteer-section section-padding" id="volunteer-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <h2 class="text-white mb-4">Join Our Volunteer Team</h2>
+
+                <form class="custom-form volunteer-form mb-5 mb-lg-0" action="{% url 'get_involved:volunteer' %}" method="post" role="form" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    <h3 class="mb-4">Application Form</h3>
+
+                    {% if messages %}
+                    <div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %} mb-4">
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <input type="text" name="first_name" id="volunteer-name" class="form-control" placeholder="First Name" required>
+                        </div>
+
+                        <div class="col-lg-6 col-12">    
+                            <input type="text" name="last_name" id="volunteer-last-name" class="form-control" placeholder="Last Name" required>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-lg-6 col-12">
+                            <input type="email" name="email" id="volunteer-email" class="form-control" placeholder="Email Address" required>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <input type="tel" name="phone" id="volunteer-phone" class="form-control" placeholder="Phone Number">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-lg-12 col-12">
+                            <select class="form-select" name="interest" required>
+                                <option value="" selected disabled>Area of Interest</option>
+                                <option value="tech_mentor">Tech Mentor</option>
+                                <option value="community_coordinator">Community Coordinator</option>
+                                <option value="content_creator">Content Creator</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-lg-12 col-12">
+                            <div class="input-group input-group-file">
+                                <input type="file" class="form-control" id="volunteer-cv" name="cv" accept=".pdf,.doc,.docx" required>
+                                <label class="input-group-text" for="volunteer-cv">Upload CV/Resume</label>
+                            </div>
+                            <small class="text-white-50">PDF or Word document (max 5MB)</small>
+                        </div>
+                    </div>
+
+                    <textarea name="message" rows="3" class="form-control mt-3" id="volunteer-message" placeholder="Why do you want to volunteer with us?"></textarea>
+
+                    <div class="form-check mt-3">
+                        <input class="form-check-input" type="checkbox" id="newsletter-consent" name="newsletter_consent">
+                        <label class="form-check-label text-white" for="newsletter-consent">
+                            I'd like to receive updates about volunteer opportunities
+                        </label>
+                    </div>
+
+                    <button type="submit" class="form-control mt-4">Submit Application</button>
+                </form>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <img src="{% static 'images/voluteer.png' %}" class="volunteer-image img-fluid" alt="Happy volunteer">
+
+                <div class="custom-block-body text-center mt-4 mt-lg-0">
+                    <h4 class="text-white mt-lg-3 mb-3">Why Volunteer With Us?</h4>
+
+                    <ul class="custom-list text-start text-white">
+                        <li class="mb-2">
+                            <i class="bi-check-circle-fill me-2"></i>
+                            Make a tangible impact in African communities
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi-check-circle-fill me-2"></i>
+                            Gain valuable experience in social innovation
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi-check-circle-fill me-2"></i>
+                            Join a network of passionate professionals
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi-check-circle-fill me-2"></i>
+                            Flexible commitments to suit your schedule
+                        </li>
+                        <li>
+                            <i class="bi-check-circle-fill me-2"></i>
+                            Receive training and mentorship
+                        </li>
+                    </ul>
+
+                    <div class="mt-4">
+                        <h5 class="text-white mb-3">Have Questions?</h5>
+                        <a href="mailto:volunteer@build4africa.org" class="text-white">volunteer@build4africa.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Volunteer Testimonials -->
+ 
+
+<style>
+    /* Hero Section Styling */
+    .hero-section {
+        position: relative;
+        min-height: 400px;
+        background-color: #2C3E50;
+        display: flex;
+        align-items: center;
+        padding: 60px 0;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{% static "images/hero-bg.jpg" %}');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-section h1.text-white,
+    .hero-section p.text-white {
+        color: #ffffff !important;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Volunteer Form Section */
+    .volunteer-section {
+        background-color: #2C3E50;
+        color: white;
+    }
+
+    .volunteer-form {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 8px;
+    }
+
+    .volunteer-section .form-control,
+    .volunteer-section .form-select {
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 1px solid #ddd;
+    }
+
+    .volunteer-section .input-group-file {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .volunteer-section small.text-white-50 {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    .volunteer-section .form-check-label {
+        color: white !important;
+    }
+
+    /* Testimonials */
+    .testimonial-block {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        height: 100%;
+    }
+
+    .testimonial-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .hero-section {
+            min-height: 350px;
+            padding: 40px 0;
+        }
+        
+        .hero-section h1.text-white {
+            font-size: 2rem;
+        }
+        
+        .hero-section p.text-white {
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .hero-section {
+            min-height: 300px;
+            padding: 30px 0;
+        }
+        
+        .volunteer-form {
+            padding: 20px;
+        }
+    }
+</style>
+{% endblock %}

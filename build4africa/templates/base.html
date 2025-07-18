@@ -1,0 +1,124 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="{% block meta_description %}Empowering Africa through Innovation, Technology, and Good Governance{% endblock %}">
+        <meta name="author" content="Build4Africa">
+
+        <title>Build4Africa - {% block title %}{% endblock %}</title>
+
+        <!-- CSS FILES -->        
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+        <link href="{% static 'css/templatemo-kind-heart-charity.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+        
+        <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+        
+        {% block extra_css %}{% endblock %}
+    </head>
+    
+    <body id="section_1">
+        {% include 'includes/header.html' %}
+
+        <main>
+            {% block content %}
+            <!-- Default content can go here if needed -->
+            {% endblock %}
+        </main>
+
+        {% include 'includes/footer.html' %}
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery.sticky.js' %}"></script>
+        <script src="{% static 'js/click-scroll.js' %}"></script>
+        <script src="{% static 'js/counter.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+        <!-- In your base.html template -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Handle home link refresh
+                document.getElementById('home-link').addEventListener('click', function(e) {
+                    if(window.location.pathname === '{% url "home" %}') {
+                        e.preventDefault();
+                        window.scrollTo({top: 0, behavior: 'smooth'});
+                        setTimeout(function() {
+                            window.location.reload();
+                        }, 300);
+                    }
+                });
+            
+                // Function to handle section scrolling
+                function scrollToSection(sectionId) {
+                    const targetSection = document.getElementById(sectionId);
+                    if(targetSection) {
+                        const offset = targetSection.getBoundingClientRect().top + window.pageYOffset - 90;
+                        window.scrollTo({
+                            top: offset,
+                            behavior: 'smooth'
+                        });
+                        history.pushState(null, null, '#' + sectionId);
+                        return true;
+                    }
+                    return false;
+                }
+            
+                // Handle About link
+                document.querySelectorAll('a[href="{% url "about" %}"]').forEach(function(aboutLink) {
+                    aboutLink.addEventListener('click', function(e) {
+                        if(window.location.pathname === '{% url "home" %}') {
+                            e.preventDefault();
+                            if(!scrollToSection('section_2')) {
+                                window.location.href = '{% url "about" %}';
+                            }
+                        }
+                    });
+                });
+            
+                // Handle Our Work navigation
+                document.querySelectorAll('.nav-link[href="#ourWorkDropdown"]').forEach(function(workLink) {
+                    workLink.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        // If on home page, scroll to section
+                        if(window.location.pathname === '{% url "home" %}') {
+                            if(!scrollToSection('section_3')) {
+                                // If section not found, reload page with hash
+                                window.location.href = '{% url "home" %}#section_3';
+                            }
+                        } 
+                        // If not on home page, navigate to home page with hash
+                        else {
+                            window.location.href = '{% url "home" %}#section_3';
+                        }
+                    });
+                });
+            
+                // Handle Our Work dropdown items
+                document.querySelectorAll(
+                    '.dropdown-item[href="{% url "work:youth" %}"], ' +
+                    '.dropdown-item[href="{% url "work:governance" %}"], ' +
+                    '.dropdown-item[href="{% url "work:fintech" %}"], ' +
+                    '.dropdown-item[href="{% url "work:education" %}"]'
+                ).forEach(function(dropdownItem) {
+                    // These will navigate normally to their pages
+                });
+            
+                // Handle hash on page load
+                if(window.location.hash) {
+                    const sectionId = window.location.hash.substring(1);
+                    setTimeout(function() {
+                        scrollToSection(sectionId);
+                    }, 100);
+                }
+            });
+            </script>
+        
+        {% block extra_js %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,451 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}News & Media - Build4Africa{% endblock %}
+
+{% block content %}
+<head>
+    <!-- Add this line to load Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<!-- News & Media Hero Section -->
+<section class="hero-section news-media-hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="text-white mb-4">News & Media</h1>
+                <p class="lead text-white">Stay informed and inspired. Explore the latest stories, achievements, events, and visuals shaping our journey to empower communities through technology and innovation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Press Releases Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-10 mx-auto text-center">
+                <span class="badge bg-primary bg-opacity-10 text-primary mb-3">OFFICIAL UPDATES</span>
+                <h2 class="display-5 fw-bold mb-3">Press Releases</h2>
+                <p class="lead text-muted">Groundbreaking partnerships, major launches, and national recognitions</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Press Release Item 1 -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="icon-wrapper bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-4" style="width: 60px; height: 60px;">
+                            <i class="bi bi-megaphone fs-4"></i>
+                        </div>
+                        <span class="badge bg-primary bg-opacity-10 text-primary mb-2"></span>
+                        <h5 class="card-title mb-3">Youth Digital Empowerment Program Launch</h5>
+                        <p class="card-text text-muted">Training 10,000 Young Africans in Future-Ready Digital Skills
+
+                            We're proud to launch the Youth Digital Empowerment Program (YDEP) — a transformative initiative to equip 10,000 young Africans (ages 16–35) with essential digital skills for the future workforce.
+                            Training areas include:
+                            
+                            <li>Web & Mobile Development</li>
+                            
+                            <li>Data & AI</li>
+                            <li>Cybersecurity</li>
+                            <li> Digital Marketing</li>
+                            <li>Cloud & DevOps</li></br>
+                            
+                            ✅ weeks of hybrid training</br>
+                            ✅ Certification, mentorship, job access</br>
+                            ✅ Free to join – no prior experience needed</p>
+                         
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Press Release Item 2 -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="icon-wrapper bg-success bg-opacity-10 text-success rounded-circle p-3 mb-4" style="width: 60px; height: 60px;">
+                            <i class="bi bi-trophy fs-4"></i>
+                        </div>
+                        <span class="badge bg-success bg-opacity-10 text-success mb-2"></span>
+                        <h5 class="card-title mb-3">West Africa Innovation Hub Recognition</h5>
+                        <p class="card-text text-muted">Build4Africa has been honored with a prestigious award recognizing its excellence in technology innovation and community impact across West Africa. This accolade reflects our unwavering commitment to empowering youth, bridging the digital divide, and fostering inclusive growth through cutting-edge training, grassroots initiatives, and transformative tech programs. As a recognized innovation hub, Build4Africa continues to lead efforts in shaping a digitally empowered and socially resilient future for African communities.Build4Africa is proud to be at the forefront of Africa’s innovation movement—driving progress, inclusion, and opportunity at scale.
+
+                        </p>
+                         
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Press Release Item 3 -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="icon-wrapper bg-info bg-opacity-10 text-info rounded-circle p-3 mb-4" style="width: 60px; height: 60px;">
+                            <i class="bi bi-shake-hands fs-4"></i>
+                        </div>
+                        <span class="badge bg-info bg-opacity-10 text-info mb-2"></span>
+                        <h5 class="card-title mb-3">Strategic Partnership with Build4Africa Foundation</h5>
+                        <p class="card-text text-muted">Build4Africa is proud to announce a new partnership to expand digital access and inclusion across rural communities in five African nations. This collaboration brings together leaders in education, technology, and grassroots development to deliver scalable, high-impact digital empowerment. Through shared resources, mobile tech hubs, and localized training, the initiative will equip underserved populations—especially youth and women—with essential digital skills, internet access, and economic opportunities. Together, we aim to bridge the digital divide and build lasting pathways to innovation and inclusion across the continent.
+
+
+
+                        </p>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<!-- Blog Section -->
+<section class="section-padding" style="background-color: #2C3E50;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-10 mx-auto text-center">
+                <span class="badge bg-light text-primary mb-3">INSIGHTS</span>
+                <h2 class="display-5 fw-bold mb-3 text-white">Blog & Updates</h2>
+                <p class="lead text-white-50">Ideas, innovation, and impact—narrated by us</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            {% for post in blog_posts %}
+            <div class="col-md-4">
+                <a href="{% url 'news:post_detail' post.slug %}" class="text-decoration-none">
+                    <div class="card border-0 h-100" style="background-color: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+                        {% if post.featured_image %}
+                        <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.title }}" style="height: 180px; object-fit: cover;">
+                        {% endif %}
+                        <div class="card-body p-4">
+                            <span class="badge bg-{{ post.category_color|default:'info' }} bg-opacity-25 text-{{ post.category_color|default:'info' }} mb-3">
+                                {{ post.category|default:"Technology" }}
+                            </span>
+                            <h5 class="card-title mb-3 text-white">{{ post.title }}</h5>
+                            <p class="card-text text-white-50">{{ post.excerpt|truncatewords:20 }}</p>
+                            <div class="d-flex align-items-center mt-auto pt-4">
+                                <div>
+                                    <small class="text-white d-block">
+                                        <i class="fas fa-user me-2"></i>{{ post.author.get_full_name|default:post.author.username }}
+                                    </small>
+                                    <small class="text-white-50">
+                                        <i class="fas fa-calendar me-2"></i>{{ post.published_date|date:"F j, Y" }}
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center">
+                <p class="text-white-50">No blog posts available at the moment. Check back soon!</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Compact Webinar Section -->
+<section class="section-padding py-4">  <!-- Reduced padding -->
+    <div class="container">
+        <div class="row mb-4">  <!-- Reduced margin -->
+            <div class="col-12 text-center">  <!-- Full width header -->
+                <span class="badge bg-primary bg-opacity-10 text-primary mb-2">ENGAGEMENT</span>
+                <h2 class="display-5 fw-bold mb-3">Events</h2>
+                <span class="badge bg-secondary bg-opacity-10 text-secondary mb-3">WEBINAR</span>
+                <h3 class="h4 fw-bold">Building Ethical AI for Africa</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">  <!-- Full width column -->
+                <div class="card border-0 bg-light">  <!-- Light background for emphasis -->
+                    <div class="card-body p-4 text-center">  <!-- Centered content -->
+                        <p class="lead mb-3">Join experts discussing responsible AI development for African contexts</p>
+                        <a href="#" class="btn px-4" style="background-color: #2C3E50; color: white;">
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Enhanced Gallery Section with Larger Images -->
+<!-- Gallery Section with Smaller Text -->
+<!-- Gallery Section with Preserved Title Color -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-10 mx-auto text-center">
+                <span class="badge bg-primary bg-opacity-10 text-primary mb-3">VISUAL STORIES</span>
+                <h2 class="display-5 fw-bold mb-3">Gallery</h2>
+                <p class="lead text-muted">See the impact in action</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            {% for image in gallery_images %}
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="gallery-card bg-white rounded-3 shadow-sm">
+                    <img src="{{ image.image.url }}" 
+                         class="img-fluid w-100 rounded-top" 
+                         alt="{{ image.title }}"
+                         style="height: 300px; object-fit: cover;">
+                    <div class="p-3">  <!-- Smaller padding -->
+                        <h6 class="fw-bold mb-1 gallery-title-color">{{ image.title }}</h6>  <!-- Explicit dark color -->
+                        <p class="small text-muted mb-0">{{ image.caption }}</p>  <!-- Smaller caption -->
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center py-5">
+                <p class="text-muted">No gallery images available yet</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter CTA -->
+<!-- Newsletter CTA -->
+<section class="newsletter-cta py-5" style="background-color: #2C3E50;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
+                <h3 class="text-white mb-2" style="font-weight: 600; letter-spacing: 0.5px;">Stay Updated With Us</h3>
+                <p class="text-white-80 mb-0" style="opacity: 0.9; font-size: 0.95rem;">
+                    Get exclusive content, latest news, and special offers delivered straight to your inbox.
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <div class="d-flex flex-column flex-lg-row align-items-center justify-content-lg-end">
+                    <form class="w-100 mb-3 mb-lg-0 me-lg-3" id="newsletterForm" action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="input-group">
+                            <input type="email" name="email" class="form-control" placeholder="Enter your email" 
+                                   style="border-radius: 4px 0 0 4px; border: none; padding: 10px 15px;" required>
+                            <button type="submit" class="btn btn-light" 
+                                    style="border-radius: 0 4px 4px 0; padding: 10px 20px; font-weight: 500;">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                    <div class="social-icons d-flex justify-content-center">
+                        <a href="https://instagram.com/yourprofile" class="text-white mx-2" 
+                           style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(255,255,255,0.1); transition: all 0.3s ease;">
+                            <i class="bi bi-instagram fs-5"></i>
+                        </a>
+                        <a href="https://youtube.com/yourchannel" class="text-white mx-2" 
+                           style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(255,255,255,0.1); transition: all 0.3s ease;">
+                            <i class="bi bi-youtube fs-5"></i>
+                        </a>
+                        <a href="https://linkedin.com/yourprofile" class="text-white mx-2" 
+                           style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(255,255,255,0.1); transition: all 0.3s ease;">
+                            <i class="bi bi-linkedin fs-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Custom styles for News & Media page */
+    .news-media-hero {
+        background-color: #2C3E50;
+        background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 90%);
+        padding: 120px 0;
+        color: white;
+    }
+    
+    .news-media-hero h1,
+    .news-media-hero .lead {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .icon-wrapper {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .card {
+        border: none;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    
+    .card:hover .icon-wrapper {
+        transform: scale(1.1);
+    }
+    
+    .event-date {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+    
+    .event-date .day {
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+    
+    .event-date .month {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+    
+    /* Gallery Styles */
+.gallery-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.gallery-title-color {
+        color: #5BC1AC !important;
+    }
+.gallery-card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+    
+    .social-icons a {
+        transition: opacity 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+        opacity: 0.8;
+    }
+    /* Add to your extra_css block */
+.card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255,255,255,0.1) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+.btn-light:hover {
+    background-color: #f8f9fa !important;
+    color: #2C3E50 !important;
+}
+.social-icons a:hover {
+    opacity: 0.8;
+}
+.newsletter-cta {
+        font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+    .newsletter-cta .form-control:focus {
+        box-shadow: none;
+        border-color: #ddd;
+    }
+    .newsletter-cta .btn-light {
+        background-color: #f8f9fa;
+        color: #2C3E50;
+        transition: all 0.3s ease;
+    }
+    .newsletter-cta .btn-light:hover {
+        background-color: #e9ecef;
+    }
+    .social-icons a:hover {
+        background-color: rgba(255,255,255,0.2) !important;
+        transform: translateY(-2px);
+    }
+ 
+ 
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize gallery lightbox functionality if needed
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Lightbox implementation would go here
+            console.log('Gallery item clicked:', this.href);
+        });
+    });
+});
+</script>
+<script>
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = this.querySelector('input[type="email"]').value;
+    
+    // Here you would typically send to a server or email service
+    console.log('Subscribed email:', email);
+    
+    // Show success message
+    alert('Thank you for subscribing!');
+    this.reset();
+});
+</script>
+<script>
+    document.getElementById('load-more-gallery')?.addEventListener('click', function() {
+        this.classList.add('d-none');
+        document.getElementById('more-gallery-images').classList.remove('d-none');
+    });
+</script>
+{% endblock %}

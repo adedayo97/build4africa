@@ -1,0 +1,139 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-light shadow-lg">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}" id="home-link">
+            <img src="{% static 'images/logo2.png' %}" class="logo img-fluid" alt="Build4Africa">
+            <span>
+                Build4Africa
+                <small>Empowering Africa through Innovation</small>
+            </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {% if '/about/' in request.path %}active{% endif %}" href="{% url 'about' %}">About</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if '/work/' in request.path %}active{% endif %}" href="#" id="ourWorkDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Work</a>
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="ourWorkDropdown" style="min-width: 220px;">
+                        <li><a class="dropdown-item text-wrap" href="{% url 'work:youth' %}">Youth Empowerment</a></li>
+                        <li><a class="dropdown-item text-wrap" href="{% url 'work:governance' %}">Good Governance</a></li>
+                        <li><a class="dropdown-item text-wrap" href="{% url 'work:fintech' %}">FinTech & Inclusion</a></li>
+                        <li><a class="dropdown-item text-wrap" href="{% url 'work:education' %}">Education</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {% if '/innovation/' in request.path %}active{% endif %}" href="{% url 'innovation:index' %}">Innovation Lab</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if '/get-involved/' in request.path %}active{% endif %}" href="#" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Get Involved</a>
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="getInvolvedDropdown" style="min-width: 220px;">
+                        <li><a class="dropdown-item text-wrap" href="{% url 'get_involved:partner' %}">Partner With Us</a></li>
+                        <li><a class="dropdown-item text-wrap" href="{% url 'get_involved:volunteer' %}">Volunteer/Mentor</a></li>
+                        <li><a class="dropdown-item text-wrap" href="{% url 'get_involved:donate' %}">Sponsor/Donate</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {% if '/news/' in request.path %}active{% endif %}" href="{% url 'news:index' %}">News</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {% if '/contact/' in request.path %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
+                </li>
+
+                <li class="nav-item ms-3">
+                    <a class="nav-link custom-btn custom-border-btn btn" href="{% url 'get_involved:donate' %}">Donate</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* Custom styles for dropdown menus */
+    .dropdown-menu {
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        border: none;
+        padding: 0.5rem 0;
+    }
+    
+    .dropdown-item {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+        white-space: normal;
+    }
+    
+    .dropdown-item:hover {
+        background-color: #f8f9fa;
+        color: #0d6efd;
+    }
+    
+    .dropdown-item.text-wrap {
+        white-space: normal;
+        word-wrap: break-word;
+    }
+    
+    .dropdown-toggle::after {
+        margin-left: 0.5em;
+        vertical-align: 0.15em;
+    }
+    
+    @media (max-width: 991.98px) {
+        .dropdown-menu {
+            border: none;
+            box-shadow: none;
+        }
+        
+        .dropdown-item {
+            padding: 0.5rem 1rem;
+        }
+        
+        .navbar-nav .nav-item {
+            margin-bottom: 0.25rem;
+        }
+    }
+</style>
+
+<script>
+// Robust navigation handler that works for all scenarios
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle home link refresh
+    document.getElementById('home-link').addEventListener('click', function(e) {
+        if(window.location.pathname === "{% url 'home' %}") {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+            setTimeout(function() {
+                window.location.reload();
+            }, 300);
+        }
+    });
+
+    // Handle all navigation links
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            // Only handle same-page navigation
+            if(this.getAttribute('href') === window.location.pathname) {
+                e.preventDefault();
+                window.scrollTo({top: 0, behavior: 'smooth'});
+                setTimeout(function() {
+                    window.location.reload();
+                }, 300);
+            }
+        });
+    });
+});
+</script>

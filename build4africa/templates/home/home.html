@@ -1,0 +1,301 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home - Empowering Africa through Innovation{% endblock %}
+
+{% block meta_description %}Build4Africa is a continental alliance working to empower Africa through technology, innovation, and good governance. Join us in building a better future.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section hero-section-full-height">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-12 p-0">
+                <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/hero1.jpg' %}" class="carousel-image img-fluid" alt="Volunteers helping">
+                            <div class="carousel-caption d-flex flex-column justify-content-end">
+                                <h1>Building Africa with Innovation</h1>
+                                <p>One Solution at a Time</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="{% static 'images/slide/volunteer-selecting-organizing-clothes-donations-charity.jpg' %}" class="carousel-image img-fluid" alt="Community support">
+                            <div class="carousel-caption d-flex flex-column justify-content-end">
+                                <h1>Empowering Communities</h1>
+                                <p>Through Sustainable Solutions</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="{% static 'images/hero3.jpg' %}" class="carousel-image img-fluid" alt="Team collaboration">
+                            <div class="carousel-caption d-flex flex-column justify-content-end">
+                                <h1>Collaborative Approach</h1>
+                                <p>Partnering for Progress</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#hero-slide" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section-padding section-bg" id="section_2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                <img src="{% static 'images/about_us.jpg' %}" class="custom-text-box-image img-fluid" alt="">
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="custom-text-box">
+                    <h2 class="mb-2">About Us</h2>
+                    <h5 class="mb-3">Build4Africa, Non-Profit Organization</h5>
+                    <p class="mb-0">Build4Africa is a continental alliance of African professionals, technologists, innovators, and governance experts working together to redefine the future of Africa. With deep-rooted expertise in information technology, public policy, education, and finance, we are committed to building practical, scalable, and sustainable solutions that improve the quality of life for every African. We believe that the future of Africa lies in the hands of its people—especially its youth. Through our transformative programs and digital platforms, we are empowering a new generation of leaders, coders, change-makers, and entrepreneurs.</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="custom-text-box mb-lg-0">
+                            <h5 class="mb-3">Our Mission</h5>
+                            <p>To harness the power of technology, innovation, and inclusive development to build a prosperous, secure, and self-sustaining Africa.</p>
+                            <ul class="custom-list mt-2">
+                                <li class="custom-list-item d-flex">
+                                    <i class="bi-check custom-text-box-icon me-2"></i>
+                                    Technology-driven solutions
+                                </li>
+                                <li class="custom-list-item d-flex">
+                                    <i class="bi-check custom-text-box-icon me-2"></i>
+                                    Youth empowerment
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="custom-text-box mb-lg-0">
+                            <h5 class="mb-3">Our Vision</h5>
+                            <p>Digitally empowered Africa driven by its people, innovation, and inclusive systems.</p>
+                            <ul class="custom-list mt-2">
+                                <li class="custom-list-item d-flex">
+                                    <i class="bi-check custom-text-box-icon me-2"></i>
+                                    Inclusive growth
+                                </li>
+                                <li class="custom-list-item d-flex">
+                                    <i class="bi-check custom-text-box-icon me-2"></i>
+                                    Sustainable development
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- New CTA Section -->
+<section class="cta-section section-padding section-bg">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-5 col-12 ms-auto">
+                <h2 class="mb-0">Make an impact. <br> Save lives.</h2>
+            </div>
+
+            <div class="col-lg-5 col-12">
+                <a href="{% url 'get_involved:donate' %}" class="me-4">Make a donation</a>
+                <a href="#section_4" class="custom-btn btn smoothscroll">Become a volunteer</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Work Section -->
+<section class="section-padding" id="section_3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12 text-center mb-4">
+                <h2>Our Work</h2>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block-wrap">
+                    <img src="{% static 'images/study-group-african-people.jpg' %}" class="custom-block-image img-fluid" alt="Youth Empowerment">
+
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">Youth Empowerment & Skills Training</h5>
+                            <p>Transforming Africa's youth through technology and innovation programs</p>
+                            <ul class="list-unstyled mt-3">
+                                <li>• AI4Africa Initiative</li>
+                                <li>• Female Tech Inclusion</li>
+                                <li>• Youth bootcamps</li>
+                            </ul>
+                            <div class="d-flex align-items-center my-2">
+                                <p class="mb-0">
+                                    <strong>Participants:</strong>
+                                    15,000+
+                                </p>
+                            </div>
+                        </div>
+                        <a href="{% url 'work:youth' %}" class="custom-btn btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block-wrap">
+                    <img src="{% static 'images/causes/african-woman-pouring-water-recipient-outdoors.jpg' %}" class="custom-block-image img-fluid" alt="Good Governance">
+
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">Good Governance & Civic Tech</h5>
+                            <p>Empowering citizens and governments through technology solutions</p>
+                            <ul class="list-unstyled mt-3">
+                                <li>• Smart governance platforms</li>
+                                <li>• VoiceItOut engagement tool</li>
+                                <li>• Transparency dashboards</li>
+                            </ul>
+                            <div class="d-flex align-items-center my-2">
+                                <p class="mb-0">
+                                    <strong>Communities Served:</strong>
+                                    200+
+                                </p>
+                            </div>
+                        </div>
+                        <a href="{% url 'work:governance' %}" class="custom-btn btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block-wrap">
+                    <img src="{% static 'images/fintech_home.jpg' %}" class="custom-block-image img-fluid" alt="Financial Inclusion">
+
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">FinTech & Financial Inclusion</h5>
+                            <p>Innovative financial solutions for underserved communities</p>
+                            <ul class="list-unstyled mt-3">
+                                <li>• Mobile banking innovation</li>
+                                <li>• Blockchain for rural trade</li>
+                                <li>• Microfinance systems</li>
+                            </ul>
+                            <div class="d-flex align-items-center my-2">
+                                <p class="mb-0">
+                                    <strong>Users Reached:</strong>
+                                    50,000+
+                                </p>
+                            </div>
+                        </div>
+                        <a href="{% url 'work:fintech' %}" class="custom-btn btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="custom-block-wrap">
+                    <img src="{% static 'images/causes/group-african-kids-paying-attention-class.jpg' %}" class="custom-block-image img-fluid" alt="eLearning">
+
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">Education & eLearning</h5>
+                            <p>Bridging the digital divide in African education</p>
+                            <ul class="list-unstyled mt-3">
+                                <li>• EduPower Africa platform</li>
+                                <li>• Community tech labs</li>
+                                <li>• Digital literacy missions</li>
+                            </ul>
+                            <div class="d-flex align-items-center my-2">
+                                <p class="mb-0">
+                                    <strong>Students Impacted:</strong>
+                                    100,000+
+                                </p>
+                            </div>
+                        </div>
+                        <a href="{% url 'work:education' %}" class="custom-btn btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Contact Section -->
+
+<section class="testimonial-section section-padding section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-12 mx-auto">
+                <h2 class="mb-lg-3">What People Say About Build4Africa</h2>
+                
+                <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carousel-caption">
+                                <h4 class="carousel-title">Build4Africa transformed our community with their sustainable construction solutions. The school they built has changed lives.</h4>
+                                <small class="carousel-name"><span class="carousel-name-title">Amina Diallo</span>, Community Leader, Senegal</small>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <h4 class="carousel-title">Their innovative approach to affordable housing in rural areas is exactly what Africa needs right now.</h4>
+                                <small class="carousel-name"><span class="carousel-name-title">Kwame Nkrumah</span>, Urban Development Minister, Ghana</small>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <h4 class="carousel-title">As a donor, I'm impressed by Build4Africa's transparency and the tangible impact of every project I've supported.</h4>
+                                <small class="carousel-name"><span class="carousel-name-title">Sarah Johnson</span>, International Donor</small>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <h4 class="carousel-title">Working with Build4Africa has been transformative. Their training programs empowered our local workforce with valuable skills.</h4>
+                                <small class="carousel-name"><span class="carousel-name-title">David Okafor</span>, Construction Partner, Nigeria</small>
+                            </div>
+                        </div>
+
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
+                                <img src="{% static 'images/avatar/avatar1.jpg' %}" class="img-fluid rounded-circle avatar-image" alt="Amina Diallo">
+                            </li>
+
+                            <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
+                                <img src="{% static 'images/avatar/avatar3.jpg' %} "class="img-fluid rounded-circle avatar-image" alt="Kwame Nkrumah">
+                            </li>
+
+                            <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
+                                <img src="{% static 'images/avatar/avatar2.jpg' %}" alt="Sarah Johnson" class="img-fluid rounded-circle avatar-image">
+                            
+                            </li>
+
+                            <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
+                                <img src="{% static 'images/avatar/avatar4.jpg' %}" class="img-fluid rounded-circle avatar-image" alt="David Okafor">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

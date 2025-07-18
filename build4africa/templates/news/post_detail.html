@@ -1,0 +1,23 @@
+<!-- news/templates/news/post_detail.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <article>
+        <h1>{{ post.title }}</h1>
+        <div class="text-muted mb-4">
+            <span><i class="fas fa-user me-2"></i>{{ post.author.get_full_name|default:post.author.username }}</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-calendar me-2"></i>{{ post.published_date|date:"F j, Y" }}</span>
+        </div>
+        
+        {% if post.featured_image %}
+        <img src="{{ post.featured_image.url }}" class="img-fluid rounded mb-4" alt="{{ post.title }}">
+        {% endif %}
+        
+        <div class="post-content">
+            {{ post.content|safe }}
+        </div>
+    </article>
+</div>
+{% endblock %}

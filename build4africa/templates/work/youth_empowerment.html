@@ -1,0 +1,417 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Youth Empowerment - Build4Africa{% endblock %}
+
+{% block content %}
+<head>
+    <!-- Add this line to load Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<!-- Hero Section -->
+<section class="hero-section py-5" style="background-color: #5A6F80;">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-4 text-white">Youth Empowerment & Digital Skills Training</h1>
+                <p class="lead mb-4 text-white">Unlocking Africa's Tech Potential, One Youth at a Time</p>
+                <p class="text-white-90 mb-4" style="font-size: 1.1rem; line-height: 1.6;">At the heart of our mission is a simple but powerful belief: Africa's youth hold the key to the continent's digital future. Through our Youth Empowerment & Digital Skills Training initiative, we are transforming ambition into action by equipping young people with high-impact, future-proof technology skills.</p>
+                <a href="#get-involved" class="btn btn-light btn-lg mt-3">Get Involved</a>
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/youth_empowerment.jpg' %}" 
+                     class="img-fluid rounded shadow-lg" 
+                     alt="Youth participating in digital skills training"
+                     style="max-height: 400px; width: 100%; object-fit: cover; object-position: center;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What We Do Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="fw-bold">Our Training Programs</h2>
+                <p class="lead">We run extensive, hands-on training programs across the continent, designed to prepare youth for real-world opportunities in today's global digital economy.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- AI Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-primary text-primary mb-3">
+                            <i class="fas fa-robot fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Artificial Intelligence</h4>
+                        <p class="card-text">Learn to build intelligent systems, machine learning models, and AI-powered solutions that solve real-world problems.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Robotics Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-success text-success mb-3">
+                            <i class="fas fa-cogs fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Robotics</h4>
+                        <p class="card-text">Explore the exciting world of robotics—designing, building, and programming autonomous machines.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cloud Computing Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-info text-info mb-3">
+                            <i class="fas fa-cloud fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Cloud Computing</h4>
+                        <p class="card-text">Gain in-demand skills in cloud infrastructure, deployment, and services like AWS, Microsoft Azure, and Google Cloud.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cybersecurity Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-danger text-danger mb-3">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Cybersecurity</h4>
+                        <p class="card-text">Become a digital guardian—learn to protect systems and data from modern cyber threats.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Web & Mobile Dev Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-warning text-warning mb-3">
+                            <i class="fas fa-code fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Web & Mobile Development</h4>
+                        <p class="card-text">Master the art of building dynamic websites and high-performance mobile applications for Android and iOS.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Data Analytics Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-secondary text-secondary mb-3">
+                            <i class="fas fa-chart-bar fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Data Analytics</h4>
+                        <p class="card-text">Discover how to interpret, analyze, and visualize data to drive smart decisions and innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why It Matters Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="{% static 'images/youth.jpg' %}" 
+                     class="img-fluid rounded shadow-lg" 
+                     alt="Youth participating in digital skills training"
+                     style="max-height: 400px; width: 100%; object-fit: cover; object-position: center;">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-4">Why It Matters</h2>
+                <p>With technology reshaping the global job market, Africa's youth must be more than consumers of technology—they must become creators, leaders, and innovators.</p>
+                
+                <div class="mt-4">
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <div class="icon-box bg-primary text-white rounded-circle">
+                                <i class="fas fa-bridge"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Bridge the digital skills gap</h5>
+                            <p>We provide access to cutting-edge technology education that's often unavailable in traditional education systems.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <div class="icon-box bg-success text-white rounded-circle">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Foster creativity and entrepreneurship</h5>
+                            <p>Our programs encourage innovative thinking and provide tools to turn ideas into viable businesses.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <div class="icon-box bg-info text-white rounded-circle">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Increase employability and economic mobility</h5>
+                            <p>Graduates gain skills that are in high demand both locally and internationally.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <div class="icon-box bg-warning text-white rounded-circle">
+                                <i class="fas fa-globe-africa"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Position African youth for global success</h5>
+                            <p>We prepare participants to compete and excel in both local and international tech ecosystems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="fw-bold">Impact Across the Continent</h2>
+                <p class="lead">From urban tech hubs to underserved communities, our programs are reaching young people where they are.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4 text-center">
+                <div class="impact-stat display-4 fw-bold text-primary">5,000+</div>
+                <h4 class="mt-2">Youth Trained</h4>
+                <p>Empowered with digital skills since our inception</p>
+            </div>
+            
+            <div class="col-md-4 text-center">
+                <div class="impact-stat display-4 fw-bold text-success">15+</div>
+                <h4 class="mt-2">African Countries</h4>
+                <p>Where we've established training programs</p>
+            </div>
+            
+            <div class="col-md-4 text-center">
+                <div class="impact-stat display-4 fw-bold text-info">80%</div>
+                <h4 class="mt-2">Employment Rate</h4>
+                <p>Of our graduates within 6 months of completing training</p>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h3 class="mb-3">Success Stories</h3>
+                                <p>Hear directly from our alumni about how our programs have transformed their lives and careers.</p>
+                                <a href="#" class="btn btn-outline-primary">View Testimonials</a>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <i class="fas fa-quote-right fa-4x text-muted opacity-25"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Get Involved Section -->
+<section id="get-involved" class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h2 class="fw-bold">Join the Movement</h2>
+                <p class="lead text-white">Whether you're a young African ready to learn, an organization looking to partner, or a donor seeking meaningful impact—this is your chance to be part of a new digital era in Africa.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 bg-secondary text-white">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box bg-white text-primary rounded-circle mx-auto mb-3">
+                            <i class="fas fa-user-graduate fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">For Participants</h4>
+                        <p class="card-text text-white">Apply to join our training programs and start your journey in tech.</p>
+                        <a href="{% url 'get_involved:volunteer' %}" class="btn btn-light mt-3">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 bg-secondary text-white">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box bg-white text-success rounded-circle mx-auto mb-3">
+                            <i class="fas fa-handshake fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">For Partners</h4>
+                        <p class="card-text text-white">Collaborate with us to expand our impact across Africa.</p>
+                        <a href="{% url 'get_involved:partner' %}" class="btn btn-light mt-3">Partner With Us</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 bg-secondary text-white">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box bg-white text-warning rounded-circle mx-auto mb-3">
+                            <i class="fas fa-donate fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">For Donors</h4>
+                        <p class="card-text text-white">Support our mission to empower Africa's youth through tech education.</p>
+                        <a href="{% url 'get_involved:donate' %}" class="btn btn-light mt-3">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <p class="lead mb-4 text-white">👉 Get involved. Get skilled. Get empowered.</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg px-4 me-2">Contact Us</a>
+                <a href="{% url 'innovation:index' %}" class="btn btn-outline-light btn-lg px-4">See Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Ensures text remains readable */
+    .text-white-90 {
+        color: rgba(255, 255, 255, 0.95);
+    }
+    
+    /* Responsive image adjustments */
+    @media (max-width: 992px) {
+        .hero-section .col-lg-4 {
+            margin-top: 2rem;
+        }
+        .hero-section img {
+            max-height: 300px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .hero-section img {
+            max-height: 250px;
+        }
+    }
+    
+    /* Rest of your existing CSS remains the same */
+    .icon-box {
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .impact-stat {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+    
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    
+    section {
+        padding: 5rem 0;
+    }
+    
+    .bg-light-primary { background-color: rgba(13, 110, 253, 0.1); }
+    .bg-light-success { background-color: rgba(25, 135, 84, 0.1); }
+    .bg-light-info { background-color: rgba(13, 202, 240, 0.1); }
+    .bg-light-warning { background-color: rgba(255, 193, 7, 0.1); }
+    .bg-light-danger { background-color: rgba(220, 53, 69, 0.1); }
+    .bg-light-secondary { background-color: rgba(108, 117, 125, 0.1); }
+</style>
+<script>
+    $(document).ready(function() {
+        // Improved click-scroll functionality
+        $('.click-scroll').on('click', function(e) {
+            // Get the target from href attribute
+            var target = $(this).attr('href');
+            
+            // Check if it's a same-page anchor link
+            if(target.startsWith('#')) {
+                // Check if target exists on the page
+                var targetElement = $(target);
+                if(targetElement.length > 0) {
+                    try {
+                        e.preventDefault();
+                        var offset = targetElement.offset().top - 90;
+                        
+                        $('html, body').animate({
+                            scrollTop: offset
+                        }, 800);
+                        
+                        // Update URL without page reload
+                        if(history.pushState) {
+                            history.pushState(null, null, target);
+                        } else {
+                            window.location.hash = target;
+                        }
+                        
+                        return false;
+                    } catch(error) {
+                        console.error('Scroll error:', error);
+                    }
+                }
+            }
+            // For all other links, allow normal navigation
+            return true;
+        });
+        
+        // Handle page load with hash in URL
+        if(window.location.hash) {
+            var targetElement = $(window.location.hash);
+            if(targetElement.length > 0) {
+                setTimeout(function() {
+                    $('html, body').animate({
+                        scrollTop: targetElement.offset().top - 90
+                    }, 800);
+                }, 100);
+            }
+        }
+    });
+</script>
+{% endblock %}

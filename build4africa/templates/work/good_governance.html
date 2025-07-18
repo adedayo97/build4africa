@@ -1,0 +1,305 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Good Governance & Civic Tech - Build4Africa{% endblock %}
+
+{% block content %}
+<head>
+    <!-- Add this line to load Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<!-- Hero Section -->
+<section class="hero-section py-5" style="background-color: #5A6F80;">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-4 text-white">Good Governance & Civic Tech</h1>
+                <p class="lead mb-4 text-white">Technology for Transparent, Accountable, and Inclusive Governance</p>
+                <p class="text-white-90 mb-4" style="font-size: 1.1rem; line-height: 1.6;">We believe that good governance is the foundation of a thriving society—and that technology can be a powerful catalyst for change. Through our Good Governance & Civic Tech initiatives, we are building smart digital tools that bridge the gap between citizens and government, strengthen democratic engagement, and promote greater transparency and accountability.</p>
+                <p class="text-white-90 mb-4" style="font-size: 1.1rem; line-height: 1.6;">Our solutions empower both governments and the people they serve—making governance more responsive, inclusive, and data-driven.</p>
+                <a href="#get-involved" class="btn btn-light btn-lg mt-3">Get Involved</a>
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/civic_governance.jpg' %}" class="img-fluid rounded shadow-lg" alt="Civic technology in action" style="max-height: 400px; width: 100%; object-fit: cover; object-position: center;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Focus Areas Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="fw-bold">Our Focus Areas</h2>
+                <p class="lead">We design and deploy innovative civic technology systems</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Civic Engagement Card -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-primary text-primary mb-3">
+                            <i class="fas fa-users fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Civic Engagement Portals</h4>
+                        <p class="card-text">Interactive platforms that enable citizens to participate in policy discussions, access information, and collaborate on community solutions.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- E-Government Card -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-success text-success mb-3">
+                            <i class="fas fa-building fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">E-Government Infrastructure</h4>
+                        <p class="card-text">Seamless digital systems that streamline public services, reduce bureaucracy, and enhance service delivery.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Voter Tools Card -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-info text-info mb-3">
+                            <i class="fas fa-vote-yea fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Voter & Policy Feedback Tools</h4>
+                        <p class="card-text">Tools that capture citizen opinions on elections and public issues—helping leaders make informed decisions.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI Dashboards Card -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-box bg-light-warning text-warning mb-3">
+                            <i class="fas fa-chart-line fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">AI-Powered Data Dashboards</h4>
+                        <p class="card-text">Intelligent dashboards that monitor policy implementation and track public spending in real-time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why It Matters Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="{% static 'images/citizen_governance.jpg' %}" alt="Citizens engaging with government" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-4">Why Civic Tech Matters</h2>
+                <p>Africa's journey toward inclusive development demands a new governance model—one that is open, participatory, and transparent.</p>
+                
+                <div class="mt-4">
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <div class="icon-box bg-primary text-white rounded-circle">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Amplify citizen voices</h5>
+                            <p>Ensure all community members can participate in governance processes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <div class="icon-box bg-success text-white rounded-circle">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Increase access to information</h5>
+                            <p>Make public data and services easily available to all citizens.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <div class="icon-box bg-info text-white rounded-circle">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Strengthen accountability</h5>
+                            <p>Create systems that track government performance and spending.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <div class="icon-box bg-warning text-white rounded-circle">
+                                <i class="fas fa-database"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Support data-driven decisions</h5>
+                            <p>Provide leaders with real-time insights for better policymaking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="fw-bold">Driving Democratic Innovation Across Africa</h2>
+                <p class="lead">From local governments to national agencies, we are partnering with institutions to build digital ecosystems that restore trust and encourage dialogue.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4 text-center">
+                <div class="impact-stat display-4 fw-bold text-primary">50+</div>
+                <h4 class="mt-2">Governments Engaged</h4>
+                <p>Partnering with local and national institutions</p>
+            </div>
+            
+            <div class="col-md-4 text-center">
+                <div class="impact-stat display-4 fw-bold text-success">120K+</div>
+                <h4 class="mt-2">Citizens Reached</h4>
+                <p>Through our civic engagement platforms</p>
+            </div>
+            
+            <div class="col-md-4 text-center">
+                <div class="impact-stat display-4 fw-bold text-info">75%</div>
+                <h4 class="mt-2">Increased Transparency</h4>
+                <p>In partner government operations</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Get Involved Section -->
+<section id="get-involved" class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h2 class="fw-bold">Get Involved</h2>
+                <p class="lead text-white">Are you a civic leader, tech innovator, or social changemaker? Join us in building the future of governance in Africa.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 bg-secondary text-white">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box bg-white text-primary rounded-circle mx-auto mb-3">
+                            <i class="fas fa-landmark fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">For Government Partners</h4>
+                        <p class="card-text text-white">Implement our civic tech solutions in your community or agency.</p>
+                        <a href="{% url 'get_involved:partner' %}" class="btn btn-light mt-3">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 bg-secondary text-white">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box bg-white text-success rounded-circle mx-auto mb-3">
+                            <i class="fas fa-code fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">For Tech Developers</h4>
+                        <p class="card-text text-white">Contribute to our open-source civic technology projects.</p>
+                        <a href="{% url 'get_involved:volunteer' %}" class="btn btn-light mt-3">Contribute</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 bg-secondary text-white">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box bg-white text-warning rounded-circle mx-auto mb-3">
+                            <i class="fas fa-hand-holding-heart fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">For Funders</h4>
+                        <p class="card-text text-white">Support the development of transparent governance systems.</p>
+                        <a href="{% url 'get_involved:donate' %}" class="btn btn-light mt-3">Support Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <p class="lead mb-4 text-white">👉 Partner with us. Innovate with us. Transform governance.</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg px-4 me-2">Contact Us</a>
+                <a href="{% url 'innovation:index' %}" class="btn btn-outline-light btn-lg px-4">See Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .text-white-90 {
+        color: rgba(255, 255, 255, 0.95);
+    }
+    
+    .icon-box {
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .impact-stat {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+    
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    
+    section {
+        padding: 5rem 0;
+    }
+    
+    .bg-light-primary { background-color: rgba(13, 110, 253, 0.1); }
+    .bg-light-success { background-color: rgba(25, 135, 84, 0.1); }
+    .bg-light-info { background-color: rgba(13, 202, 240, 0.1); }
+    .bg-light-warning { background-color: rgba(255, 193, 7, 0.1); }
+    
+    @media (max-width: 992px) {
+        .hero-section .col-lg-4 {
+            margin-top: 2rem;
+        }
+        .hero-section img {
+            max-height: 300px;
+        }
+    }
+</style>
+{% endblock %}

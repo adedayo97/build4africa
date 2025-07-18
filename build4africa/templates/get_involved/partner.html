@@ -1,0 +1,293 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Partner With Us - Build4Africa Collaboration Opportunities{% endblock %}
+
+{% block meta_description %}Explore partnership opportunities with Build4Africa. Join corporations, NGOs, governments, and individuals in transforming Africa through technology and innovation.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section hero-section-full-height">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-12 p-0">
+                <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/partner_hero.jpg' %}" class="carousel-image img-fluid" alt="Partners shaking hands">
+                            <div class="carousel-caption d-flex flex-column justify-content-end">
+                                <h1>Partner With Us</h1>
+                                <p>Collaborate to Transform Africa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partnership Intro Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <h2 class="mb-4">Why Partner With Build4Africa?</h2>
+                <p>At Build4Africa, we believe that sustainable change requires collaboration. Our partners play a crucial role in scaling our impact across the continent. Whether you're a corporation, foundation, government agency, or individual, we have partnership opportunities that align with your goals.</p>
+                
+                <div class="mt-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi-check-circle-fill me-2 fs-4" style="color: #2C3E50;"></i>
+                        <span>Access to our network of African innovators and communities</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi-check-circle-fill me-2 fs-4" style="color: #2C3E50;"></i>
+                        <span>Opportunities for employee engagement and skills-based volunteering</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi-check-circle-fill me-2 fs-4" style="color: #2C3E50;"></i>
+                        <span>Measurable social impact with transparent reporting</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi-check-circle-fill me-2 fs-4" style="color: #2C3E50;"></i>
+                        <span>Co-branding opportunities with our initiatives</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-12">
+                <img src="{% static 'images/africa_meeting.jpg' %}" class="img-fluid rounded" alt="African business meeting">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partnership Types Section -->
+<section class="section-padding section-bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-12 text-center mb-5">
+                <h2 class="mb-3">Partnership Opportunities</h2>
+                <p>We offer various partnership models tailored to different types of organizations and individuals.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Corporate Partners -->
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block partnership-block">
+                    <div class="custom-block-body">
+                        <div class="partnership-icon mb-4">
+                            <i class="bi-building fs-1" style="color: #2C3E50;"></i>
+                        </div>
+                        <h5 class="mb-3">Corporate Partnerships</h5>
+                        <p class="mb-3">Align your CSR objectives with our impactful programs through:</p>
+                        <ul class="custom-list">
+                            <li class="custom-list-item d-flex">
+                                <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                                Strategic funding partnerships
+                            </li>
+                            <li class="custom-list-item d-flex">
+                                <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                                Employee volunteer programs
+                            </li>
+                            <li class="custom-list-item d-flex">
+                                <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                                Technology and infrastructure support
+                            </li>
+                            <li class="custom-list-item d-flex">
+                                <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                                Skills-based volunteering
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="{% url 'contact' %}" class="custom-btn btn smoothscroll">Express Interest</a>
+                </div>
+            </div>
+            
+            <!-- NGO & Government -->
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block partnership-block">
+                    <div class="custom-block-body">
+                        <div class="partnership-icon mb-4">
+                            <i class="bi-people-fill fs-1" style="color: #2C3E50;"></i>
+                        </div>
+                        <h5 class="mb-3">NGO & Government Partnerships</h5>
+                        <p class="mb-3">Collaborate to scale impact through:</p>
+                        <ul class="custom-list">
+                            <li class="custom-list-item d-flex">
+                                <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                                Program implementation partnerships
+                            </li>
+                            <li class="custom-list-item d-flex">
+                                <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                                Policy advocacy collaborations
+                            </li>
+                            <li class="custom-list-item d-flex">
+                                <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                                Community engagement initiatives
+                            </li>
+                            <li class="custom-list-item d-flex">
+                                <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                                Joint funding proposals
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="{% url 'contact' %}" class="custom-btn btn smoothscroll">Express Interest</a>
+                </div>
+            </div>
+            
+            <!-- Academic & Tech -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="custom-block partnership-block">
+                    <div class="custom-block-body">
+                        <div class="partnership-icon mb-4">
+                            <i class="bi-laptop fs-1" style="color: #2C3E50;"></i>
+                        </div>
+                        <h5 class="mb-3">Academic & Technology Partnerships</h5>
+                        <p class="mb-3">Drive innovation through:</p>
+                        <ul class="custom-list">
+                            <li class="custom-list-item d-flex">
+                                <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                                Research collaborations
+                            </li>
+                            <li class="custom-list-item d-flex">
+                                <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                                Technology co-development
+                            </li>
+                            <li class="custom-list-item d-flex">
+                                <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                                Student internship programs
+                            </li>
+                            <li class="custom-list-item d-flex">
+                                <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                                Curriculum development
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="{% url 'contact' %}" class="custom-btn btn smoothscroll">Express Interest</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Current Partners Section -->
+
+<!-- Partnership Benefits Section -->
+<section class="section-padding section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                <h2 class="mb-4">Partnership Benefits</h2>
+                
+                <div class="accordion" id="benefits-accordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#benefit1">
+                                <i class="bi-graph-up me-3" style="color: #2C3E50;"></i> Impact Measurement
+                            </button>
+                        </h3>
+                        <div id="benefit1" class="accordion-collapse collapse show" data-bs-parent="#benefits-accordion">
+                            <div class="accordion-body">
+                                Receive detailed impact reports with qualitative and quantitative data showing how your partnership is making a difference. We provide regular updates on key metrics and success stories.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#benefit2">
+                                <i class="bi-megaphone me-3" style="color: #2C3E50;"></i> Visibility & Recognition
+                            </button>
+                        </h3>
+                        <div id="benefit2" class="accordion-collapse collapse" data-bs-parent="#benefits-accordion">
+                            <div class="accordion-body">
+                                Benefit from co-branding opportunities across our digital platforms, events, and program materials. We highlight our partners in press releases, social media, and annual reports.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#benefit3">
+                                <i class="bi-people-fill me-3" style="color: #2C3E50;"></i> Employee Engagement
+                            </button>
+                        </h3>
+                        <div id="benefit3" class="accordion-collapse collapse" data-bs-parent="#benefits-accordion">
+                            <div class="accordion-body">
+                                Engage your team through volunteer opportunities, skills-based projects, and site visits. We create tailored employee engagement programs that align with your corporate values.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#benefit4">
+                                <i class="bi-lightbulb me-3" style="color: #2C3E50;"></i> Innovation Opportunities
+                            </button>
+                        </h3>
+                        <div id="benefit4" class="accordion-collapse collapse" data-bs-parent="#benefits-accordion">
+                            <div class="accordion-body">
+                                Collaborate on innovative solutions to African challenges. Partners gain early access to our technology platforms and opportunities to pilot new solutions in our communities.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-12">
+                <div class="custom-text-box">
+                    <h3 class="mb-3">Success Stories</h3>
+                    
+                    <div class="mb-4">
+                        <h5 class="d-flex align-items-center mb-2">
+                            <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                            TechCorp Africa Digital Labs
+                        </h5>
+                        <p>Through our partnership with TechCorp Africa, we've established 12 digital labs across West Africa, training over 5,000 youth in coding and digital skills.</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5 class="d-flex align-items-center mb-2">
+                            <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                            Global Foundation Education Initiative
+                        </h5>
+                        <p>Collaborating with Global Foundation, we've deployed our EduPower platform to 200 schools, reaching 50,000 students with digital learning tools.</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5 class="d-flex align-items-center mb-2">
+                            <i class="bi-check-circle-fill me-2" style="color: #2C3E50;"></i>
+                            WomenInTech Partnership
+                        </h5>
+                        <p>Our joint program with WomenInTech has empowered 2,000 young women with AI and data science skills, with 65% securing tech jobs within 6 months.</p>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="{% url 'innovation:index' %}" class="btn custom-btn">View All Case Studies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+ 
+<!-- CTA Section -->
+<section class="cta-section section-padding section-bg">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-5 col-12 ms-auto">
+                <h2 class="mb-0">Other Ways to Support</h2>
+            </div>
+
+            <div class="col-lg-5 col-12">
+                <a href="{% url 'get_involved:donate' %}" class="me-4">Make a donation</a>
+                <a href="{% url 'get_involved:volunteer' %}" class="custom-btn btn">Become a volunteer</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

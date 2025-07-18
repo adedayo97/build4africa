@@ -1,0 +1,342 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+    <!-- Add this line to load Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<!-- About Section -->
+<section class="section-padding section-bg" id="section_2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                <img src="{% static 'images/about_us.jpg' %}" class="custom-text-box-image img-fluid" alt="Build4Africa Team">
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="custom-text-box">
+                    <h2 class="mb-2">About Us</h2>
+                    <h5 class="mb-3">Build4Africa, Non-Profit Organization</h5>
+                    <p class="mb-0">Build4Africa is a continental alliance of African professionals, technologists, innovators, and governance experts working together to redefine the future of Africa. With deep-rooted expertise in information technology, public policy, education, and finance, we are committed to building practical, scalable, and sustainable solutions that improve the quality of life for every African. We believe that the future of Africa lies in the hands of its people—especially its youth. Through our transformative programs and digital platforms, we are empowering a new generation of leaders, coders, change-makers, and entrepreneurs.</p>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="custom-text-box mb-lg-0">
+                            <h5 class="mb-3">Our Mission</h5>
+                            <p>To harness the power of technology, innovation, and inclusive development to build a prosperous, secure, and self-sustaining Africa.</p>
+                            <ul class="custom-list mt-2">
+                                <li class="custom-list-item d-flex">
+                                    <i class="bi-check custom-text-box-icon me-2" style="color: #2C3E50;"></i>
+                                    Technology-driven solutions
+                                </li>
+                                <li class="custom-list-item d-flex">
+                                    <i class="bi-check custom-text-box-icon me-2" style="color: #2C3E50;"></i>
+                                    Youth empowerment
+                                </li>
+                                <li class="custom-list-item d-flex">
+                                    <i class="bi-check custom-text-box-icon me-2" style="color: #2C3E50;"></i>
+                                    Sustainable infrastructure
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="custom-text-box mb-lg-0">
+                            <h5 class="mb-3">Our Vision</h5>
+                            <p>Digitally empowered Africa driven by its people, innovation, and inclusive systems.</p>
+                            <ul class="custom-list mt-2">
+                                <li class="custom-list-item d-flex">
+                                    <i class="bi-check custom-text-box-icon me-2" style="color: #2C3E50;"></i>
+                                    Inclusive growth
+                                </li>
+                                <li class="custom-list-item d-flex">
+                                    <i class="bi-check custom-text-box-icon me-2" style="color: #2C3E50;"></i>
+                                    Sustainable development
+                                </li>
+                                <li class="custom-list-item d-flex">
+                                    <i class="bi-check custom-text-box-icon me-2" style="color: #2C3E50;"></i>
+                                    Pan-African collaboration
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Team Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2>Our Collective Strength</h2>
+                <p class="lead">The diverse expertise powering Build4Africa</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Team Role 1 -->
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                <div class="team-role text-center p-4">
+                    <div class="role-icon mb-4">
+                        <i class="bi-lightbulb fs-1" style="color: #2C3E50;"></i>
+                    </div>
+                    <h5>Technology Experts</h5>
+                    <p class="text-muted">Innovators & Developers</p>
+                    <p>Our tech team builds scalable solutions tailored to African contexts</p>
+                </div>
+            </div>
+            
+            <!-- Team Role 2 -->
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                <div class="team-role text-center p-4">
+                    <div class="role-icon mb-4">
+                        <i class="bi-globe fs-1" style="color: #2C3E50;"></i>
+                    </div>
+                    <h5>Policy Specialists</h5>
+                    <p class="text-muted">Governance Advisors</p>
+                    <p>Ensuring our solutions align with local and regional development goals</p>
+                </div>
+            </div>
+            
+            <!-- Team Role 3 -->
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                <div class="team-role text-center p-4">
+                    <div class="role-icon mb-4">
+                        <i class="bi-people fs-1" style="color: #2C3E50;"></i>
+                    </div>
+                    <h5>Community Leaders</h5>
+                    <p class="text-muted">Local Implementers</p>
+                    <p>Grassroots experts who ensure cultural relevance and adoption</p>
+                </div>
+            </div>
+            
+            <!-- Team Role 4 -->
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                <div class="team-role text-center p-4">
+                    <div class="role-icon mb-4">
+                        <i class="bi-graph-up fs-1" style="color: #2C3E50;"></i>
+                    </div>
+                    <h5>Development Economists</h5>
+                    <p class="text-muted">Sustainability Experts</p>
+                    <p>Creating models for long-term impact and financial viability</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <div class="team-values p-4 bg-light rounded">
+                    <h4 class="mb-3">Our Collaborative Approach</h4>
+                    <p class="mb-0">
+                        Build4Africa brings together 50+ African professionals across 15 countries, 
+                        working collectively through our decentralized hubs. We believe in the power 
+                        of shared knowledge and pan-African collaboration to drive meaningful change.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Approach Section -->
+<section class="section-padding section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12 order-lg-2">
+                <img src="{% static 'images/approach.jpg' %}" class="img-fluid rounded" alt="Our Approach">
+            </div>
+            <div class="col-lg-6 col-12 order-lg-1">
+                <h2 class="mb-4">Our Approach</h2>
+                <div class="approach-item mb-4">
+                    <div class="d-flex">
+                        <div class="me-4">
+                            <i class="bi-lightbulb fs-1" style="color: #2C3E50;"></i>
+                        </div>
+                        <div>
+                            <h5>Local Solutions for Local Challenges</h5>
+                            <p>We believe African problems require African solutions. Our programs are designed by Africans, for Africans, leveraging local knowledge and expertise.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="approach-item mb-4">
+                    <div class="d-flex">
+                        <div class="me-4">
+                            <i class="bi-people fs-1" style="color: #2C3E50;"></i>
+                        </div>
+                        <div>
+                            <h5>Community-Centered Design</h5>
+                            <p>Every initiative begins with community engagement to ensure our solutions meet real needs and have lasting impact.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="approach-item">
+                    <div class="d-flex">
+                        <div class="me-4">
+                            <i class="bi-graph-up fs-1" style="color: #2C3E50;"></i>
+                        </div>
+                        <div>
+                            <h5>Sustainable Impact</h5>
+                            <p>We build capacity, not dependency. Our exit strategy begins on day one of every project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row text-center">
+            <!-- Country Stat -->
+            <div class="col-md-3 col-6 mb-4">
+                <div class="counter-stat">
+                    <div class="stat-icon mb-3">
+                        <i class="bi-globe fs-1" style="color: #2C3E50;"></i>
+                    </div>
+                    <h2 class="count" data-count="15">0</h2>
+                    <p>African Countries</p>
+                </div>
+            </div>
+            
+            <!-- Projects Stat -->
+            <div class="col-md-3 col-6 mb-4">
+                <div class="counter-stat">
+                    <div class="stat-icon mb-3">
+                        <i class="bi-kanban fs-1" style="color: #2C3E50;"></i>
+                    </div>
+                    <h2 class="count" data-count="250">0</h2>
+                    <p>Projects Completed</p>
+                </div>
+            </div>
+            
+            <!-- Trained Stat -->
+            <div class="col-md-3 col-6 mb-4">
+                <div class="counter-stat">
+                    <div class="stat-icon mb-3">
+                        <i class="bi-people fs-1" style="color: #2C3E50;"></i>
+                    </div>
+                    <h2 class="count" data-count="50000">0</h2>
+                    <p>People Trained</p>
+                </div>
+            </div>
+            
+            <!-- Partners Stat -->
+            <div class="col-md-3 col-6 mb-4">
+                <div class="counter-stat">
+                    <div class="stat-icon mb-3">
+                        <i class="bi-shuffle fs-1" style="color: #2C3E50;"></i>
+                    </div>
+                    <h2 class="count" data-count="100">0</h2>
+                    <p>Strategic Partners</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+<style>
+    /* Stats Section Styles */
+.counter-stat {
+    padding: 30px 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.counter-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.stat-icon {
+    background: rgba(44, 62, 80, 0.1); /* Updated to use #2C3E50 with opacity */
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.count {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.counter-stat p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+/* Team Section Styles */
+.team-role {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.team-role:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.role-icon {
+    background: rgba(44, 62, 80, 0.1); /* Updated to use #2C3E50 with opacity */
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-values {
+    border-left: 4px solid #2C3E50; /* Updated to match icon color */
+}
+</style>
+
+{% block extra_js %}
+<script>
+    // Simple counter animation for stats section
+    document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.count');
+        const speed = 200;
+        
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if(count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            
+            updateCount();
+        });
+    });
+</script>
+{% endblock %}
